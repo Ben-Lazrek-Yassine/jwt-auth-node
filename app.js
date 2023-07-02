@@ -9,7 +9,7 @@ app.use(express.static('public'));
 app.use(express.json());
 app.set('view engine', 'ejs');
 
-const dbURI = 'mongodb+srv://admin:test123@cluster0.qcsdojb.mongodb.net/node-auth';
+const dbURI = 'xxxx';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
   .then((result) => app.listen(3000))
   .catch((err) => console.log(err));
