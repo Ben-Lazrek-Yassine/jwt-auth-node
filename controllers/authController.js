@@ -5,7 +5,7 @@ const handleErrors = (err) => {
   let errors = { email: '', password: '' };
 
   if (err.code === 11000) {
-    errors.email = 'that email is already registered';
+    errors.email = 'email is already registered';
     return errors;
   }
 
