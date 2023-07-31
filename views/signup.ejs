@@ -1,5 +1,4 @@
-<%- include('partials/header'); -%>
-
+<!DOCTYPE html>
 <form action="/signup">
   <h2>Sign up</h2>
   <label for="email">Email</label>
@@ -11,8 +10,6 @@
   <button>Sign up</button>
 </form>
 
-<%- include('partials/footer'); -%>
-
 <script>
   const form = document.querySelector('form');
   const emailError = document.querySelector('.email.error');
@@ -20,8 +17,10 @@
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+
     emailError.textContent = '';
     passwordError.textContent = '';
+
     const email = form.email.value;
     const password = form.password.value;
 
